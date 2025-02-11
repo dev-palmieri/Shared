@@ -15,7 +15,7 @@ namespace GetIPAddress
         {
             string inputFilePath = "C:\\Temp\\ACS.Portal.ServiceGateway.dll.config"; // Percorso del file XML di input
             string outputFilePath = "c:\\Cert_Ports.txt"; // Percorso del file di output per le porte
-
+            // commento inserito per il test GIT 1
             try
             {
                 // Carica il contenuto XML dal file
