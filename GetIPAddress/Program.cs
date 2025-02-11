@@ -23,7 +23,7 @@ namespace GetIPAddress
 
                 // HashSet per memorizzare le porte uniche
                 HashSet<string> uniquePorts = new HashSet<string>();
-
+                // commento inserito per il test GIT 2
                 // Espressione regolare per abbinare solo gli URL https con porte
                 Regex regex = new Regex(@"https://[^:/]+:(\d+)");
 
@@ -43,7 +43,7 @@ namespace GetIPAddress
                         }
                     }
                 }
-
+                // commento inserito per il test GIT 2
                 // Scrivi le porte uniche nel file di output
                 using (StreamWriter writer = new StreamWriter(outputFilePath))
                 {
