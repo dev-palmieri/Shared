@@ -15,7 +15,10 @@ namespace GetIPAddress
         {
             string inputFilePath = "C:\\Temp\\ACS.Portal.ServiceGateway.dll.config"; // Percorso del file XML di input
             string outputFilePath = "c:\\Cert_Ports.txt"; // Percorso del file di output per le porte
-            // commento inserito per il test GIT 1
+                                                          // commento inserito per il test GIT 1
+
+
+            // commento inserito per il test GIT 5
             try
             {
                 // Carica il contenuto XML dal file
@@ -23,7 +26,7 @@ namespace GetIPAddress
 
                 // HashSet per memorizzare le porte uniche
                 HashSet<string> uniquePorts = new HashSet<string>();
-
+                // commento inserito per il test GIT 2
                 // Espressione regolare per abbinare solo gli URL https con porte
                 Regex regex = new Regex(@"https://[^:/]+:(\d+)");
 
@@ -43,7 +46,7 @@ namespace GetIPAddress
                         }
                     }
                 }
-
+                // commento inserito per il test GIT 2
                 // Scrivi le porte uniche nel file di output
                 using (StreamWriter writer = new StreamWriter(outputFilePath))
                 {
@@ -52,7 +55,7 @@ namespace GetIPAddress
                         writer.WriteLine(port);
                     }
                 }
-
+                // commento inserito per il test GIT 4
                 Console.WriteLine("Le porte HTTPS uniche sono state scritte nel file di output.");
             }
             catch (Exception ex)
