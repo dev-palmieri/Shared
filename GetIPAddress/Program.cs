@@ -52,7 +52,7 @@ namespace GetIPAddress
                         writer.WriteLine(port);
                     }
                 }
-
+                // commento inserito per il test GIT 4
                 Console.WriteLine("Le porte HTTPS uniche sono state scritte nel file di output.");
             }
             catch (Exception ex)
