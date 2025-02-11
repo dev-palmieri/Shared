@@ -1,0 +1,64 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+namespace GetIPAddress
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string inputFilePath = "C:\\Temp\\ACS.Portal.ServiceGateway.dll.config"; // Percorso del file XML di input
+            string outputFilePath = "c:\\Cert_Ports.txt"; // Percorso del file di output per le porte
+
+            try
+            {
+                // Carica il contenuto XML dal file
+                XDocument xmlDoc = XDocument.Load(inputFilePath);
+
+                // HashSet per memorizzare le porte uniche
+                HashSet<string> uniquePorts = new HashSet<string>();
+
+                // Espressione regolare per abbinare solo gli URL https con porte
+                Regex regex = new Regex(@"https://[^:/]+:(\d+)");
+
+                foreach (XElement serviceConfiguration in xmlDoc.Descendants("ServiceConfiguration"))
+                {
+                    string entryPoint = serviceConfiguration.Attribute("EntryPoint")?.Value;
+                    if (entryPoint != null)
+                    {
+                        Match match = regex.Match(entryPoint);
+                        if (match.Success)
+                        {
+                            // Estrai la porta
+                            string port = match.Groups[1].Value;
+
+                            // Aggiungi la porta all'HashSet, che eliminerà i duplicati
+                            uniquePorts.Add(port);
+                        }
+                    }
+                }
+
+                // Scrivi le porte uniche nel file di output
+                using (StreamWriter writer = new StreamWriter(outputFilePath))
+                {
+                    foreach (string port in uniquePorts)
+                    {
+                        writer.WriteLine(port);
+                    }
+                }
+
+                Console.WriteLine("Le porte HTTPS uniche sono state scritte nel file di output.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Si è verificato un errore: {ex.Message}");
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+C:\Users\FPALMIER\Desktop\GetIPAddress\bin\Debug\GetIPAddress.exe.config
+C:\Users\FPALMIER\Desktop\GetIPAddress\bin\Debug\GetIPAddress.exe
+C:\Users\FPALMIER\Desktop\GetIPAddress\bin\Debug\GetIPAddress.pdb
+C:\Users\FPALMIER\Desktop\GetIPAddress\obj\Debug\GetIPAddress.csproj.AssemblyReference.cache
+C:\Users\FPALMIER\Desktop\GetIPAddress\obj\Debug\GetIPAddress.csproj.CoreCompileInputs.cache
+C:\Users\FPALMIER\Desktop\GetIPAddress\obj\Debug\GetIPAddress.exe
+C:\Users\FPALMIER\Desktop\GetIPAddress\obj\Debug\GetIPAddress.pdb
