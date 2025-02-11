@@ -62,6 +62,13 @@ namespace GetIPAddress
             {
                 Console.WriteLine($"Si è verificato un errore: {ex.Message}");
             }
+
+            
+
+        }
+        private static string Get()
+        {
+            return "Ciao";
         }
         private static string Get()
         {
