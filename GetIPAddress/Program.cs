@@ -70,7 +70,7 @@ namespace GetIPAddress
         {
             return "Ciao";
         }
-        private static string Get()
+        private static string Get(string value)
         {
             return "";
         }
