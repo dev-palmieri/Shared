@@ -52,11 +52,16 @@ namespace GetIPAddress
                 {
                     foreach (string port in uniquePorts)
                     {
-                        writer.WriteLine(port);
+                        writer.WriteLine($"Port: {port}");
                     }
                 }
                 // commento inserito per il test GIT 4
                 Console.WriteLine("Le porte HTTPS uniche sono state scritte nel file di output.");
+            }
+            catch (NullReferenceException nx)
+            {
+                Console.WriteLine($"Si è verificato un errore: {nx.Message}");
+
             }
             catch (Exception ex)
             {
@@ -69,10 +74,6 @@ namespace GetIPAddress
         private static string Get()
         {
             return "Ciao";
-        }
-        private static string Get(string value)
-        {
-            return "";
         }
     }
 }
