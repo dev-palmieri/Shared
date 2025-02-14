@@ -58,9 +58,9 @@ namespace GetIPAddress
                 // commento inserito per il test GIT 4
                 Console.WriteLine("Le porte HTTPS uniche sono state scritte nel file di output.");
             }
-            catch (NullReferenceException cx)
+            catch (NullReferenceException nx)
             {
-                Console.WriteLine($"Si è verificato un errore: {cx.Message}");
+                Console.WriteLine($"Si è verificato un errore: {nx.Message}");
 
             }
             catch (Exception ex)
@@ -75,10 +75,9 @@ namespace GetIPAddress
         {
             return "Ciao";
         }
-        private static string Get(string value, int num=8)
+        private static string Get(string value, int num=0)
         {
-            int ris = num * 7;
-            return $"Que: {ris.ToString()}";
+            return "Que";
         }
     }
 }
