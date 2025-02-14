@@ -80,6 +80,12 @@ namespace GetIPAddress
             int ris = num * 7;
             return $"Que: {ris.ToString()}";
         }
+
+        private static string GetX2()
+        {
+            return "Ciao";
+        }
+
         private static string GetX3()
         {
             return "Ciao";
