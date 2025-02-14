@@ -75,5 +75,9 @@ namespace GetIPAddress
         {
             return "Ciao";
         }
+        private static string Get(string value, int num = 0)
+        {
+            return "Que";
+        }
     }
 }
