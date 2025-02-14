@@ -84,5 +84,9 @@ namespace GetIPAddress
         {
             return "Ciao";
         }
+        private static string GetX3()
+        {
+            return "Ciao";
+        }
     }
 }
